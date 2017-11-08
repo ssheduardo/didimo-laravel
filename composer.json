@@ -1,0 +1,21 @@
+{
+    "name": "ssheduardo/didimo-laravel",
+    "description": "Package didimo to send sms with laravel",
+    "require": {
+        "didimo/sms": "^1.0",
+        "illuminate/support": "5.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo D.",
+            "email": "ssh.eduardo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ssheduardo\\Didimo\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
