@@ -43,13 +43,6 @@ DIDIMO_USER=TU_USER
 DIDIMO_PASSWORD=TU_PASSWORD
 ```
 
-Eh agregado una variable más de entorno como ayuda por si queréis configurar el enviroment en tu entorno de test o producción
-
-```php
-DIDIMO_ENVIROMENT
-```
-Por defecto su valor es **test**
-
 Finalmente publicamos nuestro archivo de configuración por si queremos cambiar la configuración y no hacer eso de las variables de entorno
 
 ```bash
@@ -104,8 +97,6 @@ class SmsController extends Controller
 
 ```php
 Sms::setEnviroment('test');
-//O podemos llamar al valor asignado en el config (test o live)
-Sms::setEnviroment(config('didimo.enviroment'));
 ```
 
 > Nota: Podemos pasar un tercer parámetro para programar el envío del sms, dicho valor tiene que tener el siguiente formato Y-m-d\TH:i:s.
