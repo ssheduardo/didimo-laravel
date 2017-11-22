@@ -6,7 +6,7 @@ All Notable changes to `Didimo` will be documented in this file
 
 ### Added
 - Updated README
-- Added enviroment variable in configuration
+- Added environment variable in configuration
 
 ### Deprecated
 - Nothing

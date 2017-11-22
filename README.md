@@ -43,10 +43,10 @@ DIDIMO_USER=TU_USER
 DIDIMO_PASSWORD=TU_PASSWORD
 ```
 
-Eh agregado una variable más de entorno como ayuda por si queréis configurar el enviroment en tu entorno de test o producción
+Eh agregado una variable más de entorno como ayuda por si queréis configurar el environment en tu entorno de test o producción
 
 ```php
-DIDIMO_ENVIROMENT
+DIDIMO_ENVIRONMENT
 ```
 Por defecto su valor es **test**
 
@@ -81,7 +81,7 @@ class SmsController extends Controller
     public function index()
     {
         //Enviar sms desde producción
-        Sms::setEnviroment('live');
+        Sms::setEnvironment('live');
 
         $response = Sms::createMessage('Test','[NUMERO_DESTINO]','Mensaje de prueba');
         if($response->Status == 200) {
@@ -103,9 +103,9 @@ class SmsController extends Controller
 > Tener en cuenta que para enviar sms de pruebas, tenéis que contactar por vuestro proveedor para que os de de alta. Bastará con cambiar live por test
 
 ```php
-Sms::setEnviroment('test');
+Sms::setEnvironment('test');
 //O podemos llamar al valor asignado en el config (test o live)
-Sms::setEnviroment(config('didimo.enviroment'));
+Sms::setEnvironment(config('didimo.environment'));
 ```
 
 > Nota: Podemos pasar un tercer parámetro para programar el envío del sms, dicho valor tiene que tener el siguiente formato Y-m-d\TH:i:s.
@@ -132,7 +132,7 @@ class SmsController extends Controller
     public function index()
     {
         //Consultar en producción
-        Sms::setEnviroment('live');
+        Sms::setEnvironment('live');
 
         $id='c366018b-97ba-4a78-8183-0d975bd2620b';
         $response = Sms::getMessageStatus($id);
@@ -167,7 +167,7 @@ class SmsController extends Controller
     public function index()
     {
         //Consultar en producción
-        Sms::setEnviroment('live');
+        Sms::setEnvironment('live');
 
         $response = Sms::getCredits();
         if($response->Status == 200) {
